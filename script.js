@@ -47,7 +47,7 @@ const products = [
 let cart = [];
 let darkMode = false;
 
-
+// لتحديد العناصر الموجودة في الصفحة
 const productsContainer = document.getElementById('products-container');
 const cartSidebar = document.getElementById('cart-sidebar');
 const cartItems = document.getElementById('cart-items');
@@ -118,6 +118,7 @@ function updateCartUI() {
     
     cartTotal.textContent = `$${total.toFixed(2)}`;
     cartCount.textContent = totalItems;
+    document.getElementById('nav-cart-count').textContent = totalItems;
     cartHeaderCount.textContent = `(${totalItems} ${totalItems === 1 ? 'item' : 'items'})`;
 
     cartItems.innerHTML = cart.map(item => {
